@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Packages - ExploreXperts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="customize.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ExploreXperts</h1>
+            <nav>
+                <ul>
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="parallax-effect">
+        <h2>Customized Packages</h2>
+    </div>
+  
+    <section id="packages">
+        <div class="package-grid">
+            <div class="package-item" data-package="adventure">
+                <img src="adventure.jpg" alt="Adventure Package">
+                <div class="package-info">
+                    <h3>Adventure Package</h3>
+                    <p>Explore the world with our thrilling adventure tours. Tailor your experience to include hiking, rafting, and more!</p>
+                    <a href="#" class="customize-btn">Customize Now</a>
+                </div>
+            </div>
+            <div class="package-item" data-package="luxury">
+                <img src="luxury.jpeg" alt="Luxury Package">
+                <div class="package-info">
+                    <h3>Luxury Package</h3>
+                    <p>Indulge in a luxurious vacation with first-class amenities and personal services. Craft a package suited to your style.</p>
+                    <a href="#" class="customize-btn">Customize Now</a>
+                </div>
+            </div>
+            <div class="package-item" data-package="family">
+                <img src="family.jpeg" alt="Family Package">
+                <div class="package-info">
+                    <h3>Family Package</h3>
+                    <p>Enjoy fun-filled activities for the whole family. Design a custom package with attractions for all age groups.</p>
+                    <a href="#" class="customize-btn">Customize Now</a>
+                </div>
+            </div>
+            <div class="package-item" data-package="romantic">
+                <img src="romantic.jpeg" alt="Romantic Package">
+                <div class="package-info">
+                    <h3>Romantic Package</h3>
+                    <p>Plan a perfect romantic getaway with scenic views, intimate dinners, and more. Make it a trip to remember.</p>
+                    <a href="#" class="customize-btn">Customize Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="customization-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Customize Your Package</h2>
+            <form id="customization-form">
+                <label for="package-type">Package Type:</label>
+                <input type="text" id="package-type" readonly>
+                
+                <label for="duration">Duration (days):</label>
+                <input type="number" id="duration" min="1" max="30" required>
+                
+                <label for="budget">Budget ($):</label>
+                <input type="number" id="budget" min="100" required>
+                
+                <label for="activities">Preferred Activities:</label>
+                <textarea id="activities" rows="3" required></textarea>
+                
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 ExploreXperts. All rights reserved.</p>
+            </div>
+            <div class="social-media">
+                <a href="https://instagram.com" target="_blank" class="social-icon">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-icon">
+                    <i class="ri-twitter-line"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="social-icon">
+                    <i class="ri-youtube-fill"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="customize.js"></script>
+</body>
+</html>

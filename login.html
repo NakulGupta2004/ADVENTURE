@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to ExplorXperts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>LOGIN <span class="highlight">ExploreXperts</span></h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required minlength="6">
+                    <label for="password">Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
+
+                <button type="submit" class="btn-submit">Login</button>
+                <center><h6>Do Not Have An Account?</h6></center>
+                <a href="register.html"><button type="button" class="btn-submit">Sign Up</button></a>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
