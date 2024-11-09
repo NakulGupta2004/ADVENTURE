@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
@@ -12,6 +11,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+.bod{
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px;
 }
 
 body {
@@ -30,10 +35,20 @@ body {
 header {
     background-color: rgba(255, 255, 255, 0.95);
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+}
+header:hover #HEAD li {
+    color: orange;
 }
 
 header .container {
@@ -62,16 +77,17 @@ nav ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
     color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .hero {
     height: 100vh;
-    background-image: url('boat2.jpg');
+    background-image: url('/images/boat2.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -80,6 +96,7 @@ nav ul li a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: background-position 0.3s ease;
 }
 
 .hero::before {
@@ -126,8 +143,8 @@ nav ul li a:hover {
 
 .btn:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .services, .about, .contact {
@@ -139,17 +156,31 @@ nav ul li a:hover {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.services h2::after, .about h2::after, .contact h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0.5rem auto 0;
 }
 
 .service-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 2rem;
+}
+#HEAD li{
+    color: #333;
 }
 
 .service-item {
     flex-basis: calc(33.333% - 2rem);
-    margin-bottom: 2rem;
     background-color: var(--background-color);
     border-radius: 10px;
     overflow: hidden;
@@ -159,7 +190,7 @@ nav ul li a:hover {
 
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service-item img {
@@ -182,12 +213,8 @@ nav ul li a:hover {
 .service-item p {
     padding: 0 1rem 1rem;
     color: var(--text-color);
-}
-
-.about p, .contact p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 form {
@@ -199,10 +226,11 @@ form {
 
 form input, form textarea {
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     transition: border-color 0.3s ease;
+    font-size: 1rem;
 }
 
 form input:focus, form textarea:focus {
@@ -238,6 +266,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .social-media a {
@@ -287,8 +317,19 @@ footer {
     }
 }
 
-
-.service-item{
-    list-style: none;
-    text-decoration: none;
+#HEAD li{
+    color: #333;
 }
+header #HEAD li {
+    color: #333;
+}
+#HEAD li {
+    color: #333 !important;
+}
+
+header h1 {
+   color: #333;
+}
+
+
+
